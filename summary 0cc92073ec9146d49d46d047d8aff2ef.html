@@ -1,0 +1,630 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>summary</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0cc92073-ec91-46d4-9d46-d047d8aff2ef" class="page sans"><header><h1 class="page-title">summary</h1></header><div class="page-body"><p id="f067021e-ec7b-4ca5-9143-c86b853fc0ba" class="">
+</p><h1 id="ee61db84-9e28-45e8-bf4c-0604a5b584f3" class="">Medical professionalism</h1><p id="7a9a76d4-af71-4170-bb71-50c34f494fa5" class="block-color-gray_background">is a set of values, behaviors and relationships that strengthen public trust in doctors</p><ul id="ddc8f70d-e233-48f1-a34d-38dee123f562" class="block-color-brown_background toggle"><li><details open=""><summary>Is based on?</summary><ul id="38e7eace-9f72-4556-828f-b0fd29831a89" class="toggle"><li><details open=""><summary>Altruism</summary><p id="e5007ad1-1f97-4966-9657-d0723fca361a" class="">best interest of the pt</p></details></li></ul><ul id="e12aa090-7a4e-45a5-857e-70c20da4138f" class="toggle"><li><details open=""><summary>accountability</summary><p id="d11f84a9-ee55-45c3-bdce-6f4492e29a85" class="">required at : individual pts, societal and pro level</p></details></li></ul><ul id="f3582eb2-f90e-4315-af00-a7d7b92d8ad5" class="toggle"><li><details open=""><summary>excellence</summary><p id="a13625af-6e15-4319-96d8-8ec21146d188" class="">involves a reliable effort to exceed normal expectations and make a commitment to life-long learning.</p></details></li></ul><ul id="f4580231-a126-4f50-a2f4-5e5fb375fc5a" class="toggle"><li><details open=""><summary>humanism</summary></details></li></ul></details></li></ul><ul id="79875fee-48ef-4a89-a2ba-c90781a902ae" class="toggle"><li><details open=""><summary>major components of professionalism?</summary><ul id="36cb42c8-fe5f-42a0-96fc-0fe21178d223" class="toggle"><li><details open=""><summary><mark class="highlight-pink"><strong>medical ethics</strong></mark></summary><p id="2a3c7aef-b736-4590-b139-5170a2e6f0bf" class="">refers to guidelines and behaviors expected from a medical pro with moral integrity to exhibit</p><ul id="9b794e8c-1e9d-4bb2-ba23-f33185332b0a" class="toggle"><li><details open=""><summary><mark class="highlight-orange">components of medical ethics?</mark></summary><ul id="b67a192f-d108-40c0-860b-fd4922388294" class="toggle"><li><details open=""><summary><mark class="highlight-teal">pt-physician relationship</mark></summary><ul id="b05b73b5-d62e-4ca5-809c-8a4729673376" class="block-color-gray_background toggle"><li><details open=""><summary><mark class="highlight-blue">core element?</mark></summary><p id="af287ff6-cafb-42a0-af7f-04c202073cc2" class="">clear and effective communication</p><ul id="1df2ea7a-06b6-4c69-817b-9377edc8be4e" class="toggle"><li><details open=""><summary>how?</summary><ul id="72107fe7-4808-45f4-a835-a60c785ff37b" class="bulleted-list"><li>listen to pt</li></ul><ul id="7f7e636c-693a-4bf8-bde7-b0708dc9bac0" class="bulleted-list"><li>share info with pt</li></ul><ul id="67094134-629e-455c-b100-c3a5fe7ad3b8" class="bulleted-list"><li>answer questions</li></ul><ul id="cfa5f8c7-672d-4582-b62f-b0a024a6a301" class="bulleted-list"><li>makes sure pt is well informed</li></ul></details></li></ul><ul id="a94290c6-e978-46ed-8d31-5b35273d0299" class="toggle"><li><details open=""><summary>importance of effective communication?</summary><ul id="2b7ff24f-0109-4f19-92eb-a3b947f8fc7d" class="bulleted-list"><li>accurate DDX</li></ul><ul id="62df5bd3-8c36-4ee9-a11c-16a6fa053361" class="bulleted-list"><li>better pt compliance</li></ul><ul id="789bf928-d8a0-41d0-9229-5d924f66a365" class="bulleted-list"><li>contribute to dr competence and self assurance</li></ul><ul id="0d86d327-c675-4c72-b39f-9825f326beaa" class="bulleted-list"><li>contribute to pt satisfaction</li></ul><ul id="29028198-356e-4eb4-b3e7-c6fb7f26efae" class="bulleted-list"><li>contribute to cost and resource effectiveness</li></ul></details></li></ul></details></li></ul><ul id="72032b17-40e4-4f08-a77d-51e1ea7ef516" class="block-color-brown_background toggle"><li><details open=""><summary><mark class="highlight-blue">dealing with difficult pt?</mark></summary><ul id="1e7569f6-f0a6-4629-be8a-7fa1a4a67004" class="toggle"><li><details open=""><summary><strong>examples</strong></summary><ul id="e78e40b9-392f-477e-8107-cb085f10b41d" class="toggle"><li><details open=""><summary>entitled demanders</summary><p id="a0fb2307-26eb-4c2e-83f1-e6066588d807" class="">frequent fliers, tests lovers</p></details></li></ul><ul id="acec5706-99fb-41d3-8f30-1b5cf98c545c" class="toggle"><li><details open=""><summary>manipulative help-rejecter</summary><p id="d352cc7f-bb8c-4c1b-8c62-4e6433b2454a" class="">doc!, it ain&#x27;t working</p></details></li></ul><ul id="5046a3ec-a994-48ce-946b-ec62b57908de" class="toggle"><li><details open=""><summary>know-it-all</summary></details></li></ul><ul id="a429cd80-3b41-45fb-a410-10da774d509d" class="toggle"><li><details open=""><summary>uncooperative</summary></details></li></ul></details></li></ul><ul id="e2e75b80-2a7a-47b9-b98a-091201b1fc53" class="toggle"><li><details open=""><summary><strong>how</strong></summary><p id="5339424d-9cce-4023-98fa-6afe2d1777fd" class="">just remember</p><ul id="6eb74f3a-cd20-4093-af91-474af1dc9174" class="bulleted-list"><li>It&#x27;s not personal</li></ul><ul id="0e2b3478-404a-49f6-8409-579f126a9c60" class="bulleted-list"><li>start with a good first impression</li></ul><ul id="bc719dea-c9eb-43aa-9519-92d05374bf43" class="bulleted-list"><li>help pt gain emotional control ( give them time and space when needed)</li></ul></details></li></ul></details></li></ul><ul id="fe3baa37-d724-493f-947e-e1d205777117" class="block-color-gray_background toggle"><li><details open=""><summary><mark class="highlight-blue">dealing with pt family?</mark></summary><p id="7057f4a4-735a-4e22-814c-4035c18094dd" class="">remember that confidentiality is to the pt, ask pt if it&#x27;s okay for them to stay</p></details></li></ul><ul id="e5d851bd-c447-41f4-a214-b860bb20f457" class="block-color-brown_background toggle"><li><details open=""><summary><mark class="highlight-blue">breaking bad news?</mark></summary><p id="3d85a8bf-b4e3-4bc9-9e9f-789b78380c07" class="">SPIKES model</p><ul id="69835950-0e7d-4f79-82f2-f28fab8a0f1f" class="toggle"><li><details open=""><summary><strong>Setting up the interview</strong></summary><ul id="03f2b5d2-dc40-4dc3-97ac-3df42c0b3000" class="bulleted-list"><li>private place, adequate time, suggest getting supportive company.</li></ul><ul id="5343bb11-4ea3-4ef9-a4cd-7509900e9974" class="bulleted-list"><li>have all data available, intro yourself</li></ul></details></li></ul><ul id="8ad2af3e-3a65-4889-bdc4-0e03854c24c5" class="toggle"><li><details open=""><summary><strong>Perception of the patient</strong></summary><p id="c6201b60-a48f-4a89-8998-7c4f0a84f335" class="">determine what the pt knows and what&#x27;s wanted to know</p></details></li></ul><ul id="da83d15b-a588-49ac-a5cf-173851414447" class="toggle"><li><details open=""><summary><strong>Invitation by the patient</strong></summary><ul id="12f92b02-cff8-4f02-9ed4-5d6b1705a9e0" class="bulleted-list"><li>most pt wants to know it all</li></ul><ul id="c8dba774-2544-4094-a072-3ac901d37f4d" class="bulleted-list"><li>discuss information disclosure ( should the family know)</li></ul><ul id="c61dba84-39a7-4ed2-99f8-09b847b874e6" class="bulleted-list"><li>if pt don&#x27;t want details, involve relatives</li></ul></details></li></ul><ul id="57f8eec1-d685-4d59-8e6b-7315f57b5db9" class="toggle"><li><details open=""><summary><strong>Knowledge to the patient</strong></summary><ul id="a45b87d4-b715-4618-90cc-3dfff6126d19" class="bulleted-list"><li>warn first</li></ul><ul id="732b13eb-aff1-4241-a1aa-d226e4a25b82" class="bulleted-list"><li>avoid jargons</li></ul><ul id="f54e4fb7-f760-40b3-a167-e11b05424085" class="bulleted-list"><li>avoid false reassurance</li></ul></details></li></ul><ul id="0c48d6f3-65da-4899-9ad4-2f140520bee7" class="toggle"><li><details open=""><summary><strong>Emotions of the patient</strong></summary><p id="84444c44-77a1-4be4-a8bf-96cb00da8c69" class="">respond to pt emo with empathy</p></details></li></ul><ul id="7420943e-3d42-491c-978c-3e975b3681c9" class="toggle"><li><details open=""><summary><strong>Strategy and summary</strong></summary><ul id="7c5dc5ee-0535-4810-b387-3c4ed86e37fc" class="bulleted-list"><li>ask if pt is ready to discuss first</li></ul><ul id="6c89d57d-c5e3-4d6e-a489-c98a81b358c9" class="bulleted-list"><li>explore pt ICE ( ideas, concerns and expectations)</li></ul><ul id="5db1aff7-6ca3-4f99-966e-faca9b20b348" class="bulleted-list"><li>understand pt&#x27;s goals ( like controlling a symptom)</li></ul><ul id="b6a55ae0-5328-442b-9620-2d6cd14ada1c" class="bulleted-list"><li>give reasonable hope of what&#x27;s possible to accomplish</li></ul></details></li></ul></details></li></ul><ul id="05b8513e-9161-441a-8f2e-2da4afb4207e" class="block-color-gray_background toggle"><li><details open=""><summary><mark class="highlight-blue">counseling</mark></summary><p id="4485f43b-0ed7-4608-9f43-462cda706a07" class="">is a professional relationship and activity in which one person attempt to help another to understand and to solve his or her adjustment problems</p><ul id="fef92a1c-0a4e-4c1e-a04d-c9bd1130f3bf" class="toggle"><li><details open=""><summary>WHO def?</summary><p id="a001bbac-4370-446a-9d07-b9f5454a886e" class="">well-focused process, limited in time and specific, which uses the interaction to help people deal with their problems and respond in a proper way to specific difficulties in order to develop new coping strategies.</p></details></li></ul><ul id="05fc4372-0429-4e8b-862d-c54e94249339" class="toggle"><li><details open=""><summary>med def?</summary><p id="c2639cb8-588a-4cdb-8fd0-da87afcedf9e" class="">valid intervention made of a quality interaction between the counselor (who can be the doctor) and the patient with The main purpose of helping the patient amplify the vision of the specific situation and discover the proper potential in dealing with the conditions of disease, in order to promote a better quality of life.</p></details></li></ul></details></li></ul></details></li></ul><ul id="c1ff4578-76e8-45ff-a232-3bcd3cf60d46" class="bulleted-list"><li>physician-physician relationship</li></ul><ul id="5f0dc10e-7cd1-4578-92a5-af0ec0be66ae" class="bulleted-list"><li>healthcare-system-physician relationship</li></ul><ul id="575f8513-02f0-423d-b55c-861c4779813d" class="bulleted-list"><li>society-physician relationship</li></ul></details></li></ul><ul id="27d73705-58e9-4b46-b6c8-b5a12e798c45" class="toggle"><li><details open=""><summary><mark class="highlight-orange">principles of medical ethics?</mark></summary><ul id="b8a5aacb-370d-4b18-8017-2e0609d742f7" class="toggle"><li><details open=""><summary>Beneficence</summary><p id="74e2bd8b-b88a-43d1-b466-f3f352c8e8fb" class="">actions to better pts/community life styles</p><ul id="bb51ff39-5c06-434c-8f50-6d9020d20d71" class="toggle"><li><details open=""><summary>examples</summary><p id="d4e155c3-0425-4909-96a4-92f9d8685846" class="">vaccinating people</p><p id="08bcd792-9106-45b7-88a8-2971c4221d6a" class="">encouraging pt to stop smocking</p><p id="fc8aa48d-e816-4ed4-8ead-9ec2cdaec3ed" class="">exercise</p></details></li></ul></details></li></ul><ul id="3f5db3f1-3725-414a-90d6-3cf265a513af" class="toggle"><li><details open=""><summary>non-maleficence &amp; malpractice</summary><p id="c406f3f0-87e1-45be-a2f2-d5aa13227154" class="">do no harm</p></details></li></ul><ul id="311acf93-0516-4848-ba55-1439f311584c" class="toggle"><li><details open=""><summary>justice</summary></details></li></ul><ul id="68df46a7-58d6-4d7d-b17f-49150e7bd04c" class="toggle"><li><details open=""><summary>pt autonomy</summary><ul id="b2c98769-9a09-4bb8-875b-1cf4072992f3" class="toggle"><li><details open=""><summary>what&#x27;s autonomy?</summary><p id="b1107034-18ed-4cf7-bd24-d83efb736698" class="">pt right to refuse or choose</p></details></li></ul><ul id="51a035c6-2545-40d8-b020-f3f2acb7d301" class="block-color-gray_background toggle"><li><details open=""><summary><mark class="highlight-blue"><strong>principles of pt autonomy?</strong></mark></summary><ul id="683dc6fd-246d-4827-89c8-271c5f8c5e40" class="toggle"><li><details open=""><summary><strong>respect</strong></summary><p id="7bb1d1e0-677a-4e00-8bc2-0d062a179a84" class="">includes:</p><ul id="f014ff8f-1017-45a0-b0d6-aafe65aa56c1" class="toggle"><li><details open=""><summary>privacy</summary><p id="1b487821-b7be-463d-b240-03c424b72cc5" class="">pt right to keep some infos to themselves</p></details></li></ul><ul id="af1fc48d-9946-4e4f-a866-569f874bafef" class="toggle"><li><details open=""><summary>confidentiality</summary><p id="23dc989f-b379-4ede-815b-e155795dedb8" class="">can be broken in case of public hazards</p></details></li></ul><ul id="cd005887-daf5-4f8c-97cd-9cb9fc1b9469" class="bulleted-list"><li>right to self-determination</li></ul></details></li></ul><ul id="5e2a613f-3479-483b-9349-05fcb13c1809" class="bulleted-list"><li><strong>honesty</strong></li></ul><ul id="286bffe5-b29c-4852-a9f2-7572f1b65c9f" class="bulleted-list"><li><strong>help make good decisions</strong></li></ul></details></li></ul><ul id="20244d50-8f1a-4d21-b00f-4888637f02dd" class="toggle"><li><details open=""><summary>conditions limiting autonomy?</summary><ul id="57184520-9835-4f21-bb9e-204f32fc8d77" class="bulleted-list"><li>pt with limited capacity &amp; competency</li></ul><ul id="6dea85a4-289d-4c5e-aa22-7fc20c4cc271" class="bulleted-list"><li>emergency care</li></ul><ul id="a297b149-dbe6-45f7-b655-ff9a45903df5" class="bulleted-list"><li>futility of care</li></ul><ul id="6ad5bfd3-e002-460e-b5ee-e7537a27e1e5" class="bulleted-list"><li>pt asking unacceptable interventions</li></ul><ul id="02b25b7a-a939-4309-90e2-7729ac282c13" class="bulleted-list"><li>public hazard</li></ul></details></li></ul></details></li></ul></details></li></ul></details></li></ul><ul id="cf2e9230-cc17-41a8-8e87-e7c31e94883a" class="toggle"><li><details open=""><summary><mark class="highlight-pink"><strong>communication skills</strong></mark></summary><p id="52442358-8158-4920-a0c2-9033e037390d" class="">is a set of skills enabling a person to convey info so that it&#x27;s received and understood and achieve its intended effect</p><ul id="22f0b242-63ec-4814-9737-a0d0468d3649" class="toggle"><li><details open=""><summary>types of communication?</summary><p id="d317b9b8-26ca-4115-8c30-ec5d4541b07b" class="">verbal &amp; non-verbal</p></details></li></ul><ul id="e4b4ce5a-0ad3-407a-bcca-3a1b4ea60331" class="toggle"><li><details open=""><summary>categories of communication?</summary><ul id="d176161f-242d-4c3f-9f98-4022515764c1" class="block-color-gray_background toggle"><li><details open=""><summary><mark class="highlight-teal">intra</mark>personal</summary><p id="3a461d00-63cd-46f0-abf1-12bade5be3bb" class="">self-talk or thinking</p></details></li></ul><ul id="bd850c4a-5ed3-491b-92c9-1f1372031dba" class="block-color-brown_background toggle"><li><details open=""><summary>direct <mark class="highlight-teal">inter</mark>personal</summary><ul id="b28f7005-4ce5-4f43-971d-bb13df8b9d18" class="toggle"><li><details open=""><summary>why strong feedback component?</summary><p id="6ce9b9ee-6e99-459d-a4a1-37ba2ae515b3" class="">cuz of its immediacy and primacy (loci)</p></details></li></ul><ul id="dcf6ac24-a27e-49bc-9ed2-304700bf4293" class="toggle"><li><details open=""><summary>four principles of interpersonal communication?</summary><ul id="1b0be359-5906-40b2-bc1d-13e73cce97f8" class="bulleted-list"><li>inescapable</li></ul><ul id="374b8794-4895-45c0-a4fc-19e75448f3e7" class="bulleted-list"><li>irreversible</li></ul><ul id="9421f7f1-4d04-45fd-be46-754f9a21c2fc" class="bulleted-list"><li>complicated</li></ul><ul id="1d1a5e6a-e49d-4b55-903a-1f8bd31e0de8" class="bulleted-list"><li>contextual</li></ul></details></li></ul></details></li></ul><ul id="fd629280-24fb-4e7a-aa92-c9853856dbfa" class="bulleted-list"><li>small group</li></ul><ul id="e6b7efda-b9c0-4524-8268-9499fd11a179" class="bulleted-list"><li>organizational</li></ul><ul id="ed79210e-583b-4cb4-8da8-839b5269242d" class="bulleted-list"><li>mass</li></ul><ul id="de674499-bfa8-4e5b-b387-0320d4b0d416" class="bulleted-list"><li>public</li></ul></details></li></ul><ul id="0b60aa1b-04de-4be8-8b16-dfead34013d4" class="toggle"><li><details open=""><summary>barriers to communication?</summary><p id="d927d28b-ca09-47fd-835c-f33aaf47a132" class="">anything that leads to loss of meaning while conveying a message</p><ul id="47fa8325-65e5-43e0-b579-c6e2520f838e" class="toggle"><li><details open=""><summary>include?</summary><p id="7d152589-f052-49b3-91c2-2cad509cf4d3" class="">lang, emo, stress, ignorance.</p><p id="48787129-502e-4828-9825-7dac4e4ac2f7" class="">basically: not listening, not being present, not understanding</p></details></li></ul></details></li></ul><ul id="26316a8d-1bc7-4d64-b561-9f09dee557d7" class="toggle"><li><details open=""><summary>workplace communication</summary><ul id="32f131fc-603e-4227-8207-2cba3c70403f" class="toggle"><li><details open=""><summary>written</summary><p id="e6d94be5-e5d5-4e67-ad8a-6e77fff4787b" class="">When patient is referred to the hospital or to a general practitioner colleague,a handover model such as SBAR (Situation, Background, Assessment, Recommendation) can be used to ensure all relevant information is passed on and recorded</p></details></li></ul></details></li></ul></details></li></ul><ul id="e8d519b3-9284-4bc0-99bc-974f01690efe" class="toggle"><li><details open=""><summary><mark class="highlight-pink"><strong>pro behavior</strong></mark></summary><p id="5c34af86-af84-4313-b476-f3f8ab7bba6e" class="">means critical thinking and problem solving, ethical and responsible role fulfillment ,initiative and accountability and appropriate nonverbal gestures and good performance.</p><ul id="8cd06512-a73a-4960-9c65-d3863f98c7b5" class="toggle"><li><details open=""><summary><strong>components?</strong></summary><ul id="c67b3ba2-26ac-42b2-ada1-d2d09780d519" class="toggle"><li><details open=""><summary><mark class="highlight-orange"><strong>Health Advocacy</strong></mark></summary><p id="44a23564-6c88-459a-b76c-0d821798c395" class="">Promote and advance the health and well-being of your community</p></details></li></ul><ul id="97c035d8-0e91-488e-ac8f-f885df064118" class="toggle"><li><details open=""><summary><mark class="highlight-orange"><strong>Collaboration</strong></mark></summary><ul id="a83b78cb-37d5-4a72-921e-05c51ae3918c" class="toggle"><li><details open=""><summary><mark class="highlight-blue">consists of?</mark></summary><ul id="3f2e12c5-83b3-4504-8e2d-d7968da5e3d5" class="block-color-gray_background toggle"><li><details open=""><summary>understating</summary><ol id="1d4e306d-0549-4323-813b-30f82ccbc348" class="numbered-list" start="1"><li>Shared decision making</li></ol><ol id="952ea0b5-dac0-451b-bdb8-4c14cef46cbf" class="numbered-list" start="2"><li>Respect of other colleagues or healthcare team members,</li></ol><ol id="49b03d43-ec53-44d3-9a9e-bfd73dcc4b02" class="numbered-list" start="3"><li>Respect for diversity,</li></ol><ol id="1e8d5fa8-e1be-4b0d-af2c-8917b5134315" class="numbered-list" start="4"><li>Team dynamics,</li></ol><ol id="294d63f2-3112-422b-8c23-48213ba5b2d8" class="numbered-list" start="5"><li>Leadership based on patient care</li></ol></details></li></ul><ul id="a1e58939-adb3-4697-8138-b4a09f8ca87e" class="block-color-brown_background toggle"><li><details open=""><summary>skills</summary><ol id="b91ab177-8bca-4e63-a309-fdb077721fbe" class="numbered-list" start="1"><li>Generic skills to be learned at work and practiced at work place.</li></ol><ol id="66b5c1a6-b09a-4a33-abbc-0affc2bc76c1" class="numbered-list" start="2"><li>Sharing knowledge and information</li></ol><ol id="8a671af1-c1d1-4b17-88c9-e98f0d8ab93b" class="numbered-list" start="3"><li>Constructive negotiations,</li></ol><ol id="7abb0820-865d-46b0-802d-529b27069a8b" class="numbered-list" start="4"><li>Understanding roles and responsibilities,</li></ol><ol id="de6f0a01-282b-42b6-aa97-0190fbf4a46d" class="numbered-list" start="5"><li>Recognizing one’s roles and limits.</li></ol><ol id="c920fc08-6a5a-4c53-8da0-83ba7c06971b" class="numbered-list" start="6"><li>Effective Consultation.</li></ol><ol id="1a2ef28d-0068-4db8-9687-3032685aca43" class="numbered-list" start="7"><li>Learning together.</li></ol></details></li></ul></details></li></ul></details></li></ul><ul id="e171e791-9406-4fe0-b1fe-c1b09e0474c5" class="toggle"><li><details open=""><summary><mark class="highlight-orange"><strong>Professional Health Care</strong></mark></summary><ul id="25d04bf6-f408-4b62-8284-d0f09c3865ed" class="toggle"><li><details open=""><summary>main components?</summary><ul id="064370ab-9d82-458b-9af4-b1b9f4715b1c" class="block-color-gray_background toggle"><li><details open=""><summary><strong><mark class="highlight-blue">Risk Management</mark></strong></summary><p id="4109ca87-4382-4e3e-97f2-668b37b62f24" class="">an organized effort to identify, assess, and reduce, where appropriate, risk to patients, visitors, staff and organizational assets.</p><ul id="9a5ffe96-d073-458d-bb39-804aa43dfbb3" class="toggle"><li><details open=""><summary>includes?</summary><p id="7cc0efcc-b6de-4520-b9b0-a47cba8e0305" class="">any activity, process, or policy to reduce liability exposure</p></details></li></ul><ul id="0b22c9a6-8aaf-43a5-b7ae-05bee058a5e4" class="toggle"><li><details open=""><summary>five basic steps to risk managment?</summary><ol id="6b5bf14a-01b7-4cd7-a7cd-4bd0e66166e3" class="numbered-list" start="1"><li>Establish the context</li></ol><ol id="f49bbaa7-9bac-4aba-90c2-55a7479c132b" class="numbered-list" start="2"><li>Identify risks</li></ol><ol id="985bebf4-8077-4806-b6b9-3bf302a2858a" class="numbered-list" start="3"><li>Analyze risks</li></ol><ol id="622c8289-86c5-413b-8568-f91b3107fda0" class="numbered-list" start="4"><li>Evaluate risks</li></ol><ol id="cacefcef-6da1-4723-8e2b-87dbf6d57a3b" class="numbered-list" start="5"><li>Treat/Manage Risks  </li></ol></details></li></ul><ul id="ab440c37-18d0-42b5-bc56-3337aa4c6290" class="toggle"><li><details open=""><summary>possible outcomes of risk management plans</summary><ul id="ad1b3eec-ed63-4b4a-b5c1-aa19141266e1" class="bulleted-list"><li>accept risk</li></ul><ul id="d5a0d5d0-0193-4f2f-8aea-9804dec5cced" class="bulleted-list"><li>avoid risk</li></ul><ul id="f8b8c55f-e888-4ee1-b3bc-f71886dc8836" class="bulleted-list"><li>mitigate risk - lessening the impact</li></ul><ul id="5ff0f969-2261-48be-a27f-dddffc39cdc7" class="bulleted-list"><li>transfer risk - outsource risk through a capable third party</li></ul></details></li></ul></details></li></ul><ul id="74705f1e-ddc1-43ec-8561-55d60173c9ad" class="block-color-brown_background toggle"><li><details open=""><summary><mark class="highlight-blue"><strong>Management of conflicts</strong></mark></summary><ul id="1c266c63-f61f-4dbf-9e2d-9e02347dfe33" class="toggle"><li><details open=""><summary>how?</summary><ul id="158e8abc-18cb-466b-9c8a-0c88acb583c7" class="bulleted-list"><li>prevent</li></ul><ul id="6caa3ebe-9683-4194-8167-2f7436db1ea5" class="bulleted-list"><li>resolve</li></ul><ul id="b13bed43-adbc-4c1a-9b93-7b4128ae3b98" class="bulleted-list"><li>control the conflicts</li></ul></details></li></ul></details></li></ul><ul id="2152fc3a-17b8-4890-84fa-03f8fb12a8a1" class="toggle"><li><details open=""><summary>Exerting maximum Effort</summary></details></li></ul><ul id="1713be89-2038-4a7e-bf78-ba4b1aec2ca4" class="toggle"><li><details open=""><summary>Appropriate relations within health system</summary></details></li></ul></details></li></ul></details></li></ul><ul id="a14c01ad-a181-458a-8004-fc22ef5d3fb6" class="toggle"><li><details open=""><summary><mark class="highlight-orange"><strong>Self-Regulation</strong></mark></summary><ul id="8a19d60e-b215-4a2e-b574-ce2033fccdd6" class="toggle"><li><details open=""><summary><strong>components?</strong></summary><ul id="edcf5665-a88e-4f7d-8aad-8bb7a8f7f0db" class="bulleted-list"><li>self healthcare</li></ul><ul id="db3134a1-2ab2-4cb7-a545-5544d3891488" class="bulleted-list"><li>commitment to continuous professional development (CPD)</li></ul><ul id="3c3726f8-8c17-41cc-bfd1-4664f2156900" class="block-color-gray_background toggle"><li><details open=""><summary>compliance with regulations of</summary><ul id="fec2bb90-1807-44aa-91a4-7aa0783a1287" class="bulleted-list"><li>medical council</li></ul><ul id="b3dc4232-5ae4-4ffe-a2c5-91243d007dbc" class="bulleted-list"><li>employer</li></ul><ul id="3561110e-3759-44e7-b6e1-6817d3ea4b09" class="bulleted-list"><li>health authorities</li></ul></details></li></ul></details></li></ul></details></li></ul><p id="41004d0e-8a62-4973-8337-fab2cda9afc1" class="">
+</p></details></li></ul></details></li></ul></details></li></ul><ul id="a90ece22-15fe-42b4-b3c0-3c47b5384649" class="block-color-brown_background toggle"><li><details open=""><summary>what makes a good doc?</summary><ul id="80800a81-5aaa-4ee3-84b2-4bb1868efadc" class="bulleted-list"><li>honesty</li></ul><ul id="240c9e96-af9f-424b-89d3-9c91ca6b1394" class="bulleted-list"><li>good communication skills</li></ul><ul id="296eb73f-085e-438d-9941-bee7405c3daf" class="bulleted-list"><li>medical competence and effectiveness</li></ul><ul id="0bd17aee-a623-4f03-a2a4-d2c2bbf93bed" class="bulleted-list"><li>resourcefulness</li></ul><ul id="2c03c636-e8bc-4506-ab07-d489fd42ecf9" class="bulleted-list"><li>health advocacy</li></ul><ul id="7eaca7a2-5a2b-47a0-88cb-4a8816be81c1" class="bulleted-list"><li>gentle manners</li></ul><ul id="2c3799c4-1513-4d29-927d-181852f247bd" class="bulleted-list"><li>self-reflection and adjustment</li></ul></details></li></ul><p id="de3227b0-4e8d-4c76-ab3c-a157e1bc4ad8" class="">
+</p></div></article></body></html>
